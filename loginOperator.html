@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>911 Call Operator Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #d9534f;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c9302c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h1>911 Call Operator Login</h1>
+    <form id="loginForm" action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required placeholder="operator_one" />
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required placeholder="123456" />
+        
+        <button type="button" id="button">Connect to Dispatch</button>
+    </form>
+    <div class="footer">
+        <p>Forgot Password? Contact your supervisor.</p>
+        <p>Wrong page? <a href = "index.html">Go back here</a></p>
+    </div>
+</div>
+
+<script>
+    const passwordInput = document.getElementById("password");
+    const usernameInput = document.getElementById("username");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", function() {
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        if (username === "operator_one" && password === "123456") {
+            window.location.href = "report.html"; // Redirect on successful login
+        } else {
+            alert("Invalid username or password.");
+        }
+    });
+</script>
+
+</body>
+</html>
