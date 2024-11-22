@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Calls Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <a class="navbar-brand" href="#">Rescue911</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="loginOperator.html">CO Portal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="loginEMT.html">EMT Portal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="loginDispatch.html">Dispatch Portal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="loginManager.html">Manager Portal</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<body>
+    <header class="bg-light py-5 text-center">
+        <div class="container">
+          <h1 class="display-4">Call Log</h1>
+        </div>
+      </header>
+
+
+<!-- Popup Modal -->
+
+
+    <div class="container my-4">
+         <h3 class = "p-2">Emergencies in Progress</h2>
+            <div class="row g-4 mb-4">
+                <div class="col-4 col-md-3">
+                    <a href = "callList.html"><button type="button" class="btn btn-danger w-100">Call Log</button></a>
+                </div>
+                <div class="col-4 col-md-3">
+                    <a href = "emtReports.html"><button type="button" class="btn btn-danger w-100">EMT Response Dashboard</button></a>
+                </div>
+                <div class="col-4 col-md-3">
+                    <a href = "emtHealth.html"><button type="button" class="btn btn-danger w-100">EMT Health Performance</button></a>
+                </div>
+                <div class="col-4 col-md-3">
+                    <a href = "patientInfo.html"><button type="button" class="btn btn-danger w-100">Patient Information</button></a>
+                </div>
+                </div>
+    <div class="container my-5">
+        <h2 class="mb-4">Active Calls</h2>
+        <div class="list-group" id="callList">
+            <!-- Call Items -->
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="1">
+                <strong>Call 1:</strong> Heart attack - 456 Maple Ave, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="2">
+                <strong>Call 2:</strong> Car accident - 1234 Elm St, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="3">
+                <strong>Call 3:</strong> House fire - 789 Pine Rd, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="4">
+                <strong>Call 4:</strong> Stroke - 951 Oak Dr, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="5">
+                <strong>Call 5:</strong> Drowning - 321 Riverbank Ln, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="6">
+                <strong>Call 6:</strong> Broken leg - 789 Palm St, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="7">
+                <strong>Call 7:</strong> Allergic reaction - 555 Cedar Rd, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="8">
+                <strong>Call 8:</strong> Fire in apartment - 120 Birch St, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="9">
+                <strong>Call 9:</strong> Overdose - 42 Aspen Blvd, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="10">
+                <strong>Call 10:</strong> Unconscious person - 77 Redwood Ln, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="11">
+                <strong>Call 11:</strong> Animal bite - 36 Willow Way, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="12">
+                <strong>Call 12:</strong> Severe burns - 801 Oakwood Dr, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="13">
+                <strong>Call 13:</strong> Child birth - 690 Chestnut St, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="14">
+                <strong>Call 14:</strong> Snakebite - 123 Timber Ln, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="15">
+                <strong>Call 15:</strong> Electric shock - 560 Elmwood Ave, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="16">
+                <strong>Call 16:</strong> Fall injury - 91 Cypress Ln, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="17">
+                <strong>Call 17:</strong> Gunshot wound - 800 Sycamore Rd, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="18">
+                <strong>Call 18:</strong> Choking - 350 Poplar St, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="19">
+                <strong>Call 19:</strong> Panic attack - 270 Magnolia Dr, Springfield
+            </label>
+            <label class="list-group-item">
+                <input type="checkbox" class="form-check-input me-2 call-checkbox" value="20">
+                <strong>Call 20:</strong> Cardiac arrest - 999 Spruce Ln, Springfield
+            </label>
+        </div>
+        <button class="btn btn-danger mt-3" onclick="mergeCalls()">Merge Selected Calls</button>
+    </div>
+
+    <!-- Merge Modal -->
+    <div class="modal fade" id="mergeModal" tabindex="-1" aria-labelledby="mergeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mergeModalLabel">Merge Calls</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="mergeDetails">Are you sure you want to merge the selected calls?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="confirmMerge()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Logic -->
+    <script>
+        let selectedCalls = []; // To store selected call IDs
+
+        function mergeCalls() {
+            // Get selected calls
+            selectedCalls = [];
+            const checkboxes = document.querySelectorAll('.call-checkbox:checked');
+            checkboxes.forEach((checkbox) => {
+                selectedCalls.push(checkbox.value);
+            });
+
+            // Check if exactly two calls are selected
+            if (selectedCalls.length !== 2) {
+                alert('Please select exactly two calls to merge.');
+                return;
+            }
+
+            // Show the modal popup with merge details
+            const modalBody = document.getElementById('mergeDetails');
+            modalBody.innerHTML = `
+                You have selected the following calls to merge:
+                <ul>
+                    <li>${document.querySelector(`label input[value="${selectedCalls[0]}"]`).parentNode.textContent.trim()}</li>
+                    <li>${document.querySelector(`label input[value="${selectedCalls[1]}"]`).parentNode.textContent.trim()}</li>
+                </ul>
+                Proceed with merging?
+            `;
+            const mergeModal = new bootstrap.Modal(document.getElementById('mergeModal'));
+            mergeModal.show();
+        }
+
+        function confirmMerge() {
+            // Perform the merge logic (placeholder for backend API or other functionality)
+            alert(`Calls ${selectedCalls[0]} and ${selectedCalls[1]} have been merged successfully.`);
+
+            // Optional: Remove merged calls from the UI
+            selectedCalls.forEach((callId) => {
+                const callLabel = document.querySelector(`label input[value="${callId}"]`).parentNode;
+                callLabel.remove();
+            });
+
+            // Reset the selected calls
+            selectedCalls = [];
+            const mergeModal = bootstrap.Modal.getInstance(document.getElementById('mergeModal'));
+            mergeModal.hide();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMT Performance & Health Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Rescue911</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loginOperator.html">CO Portal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loginEMT.html">EMT Portal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loginDispatch.html">Dispatch Portal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="loginManager.html">Manager Portal</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Overview Section -->
+  <header class="bg-light py-5 text-center">
+    <div class="container">
+      <h1 class="display-4">Emergency Response Dashboard</h1>
+      <p class="lead">Monitor EMT performance, team health, and case statistics in real-time.</p>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light text-center text-dark p-3">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto text-center">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="emtPort.html">EMT Portal</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="emtReports.html">EMT Performance</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+  <!-- Statistics Section -->
+  <section class="container my-5">
+    <div class="row text-center">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Total Active EMTs</h5>
+            <p class="card-text display-5 fw-bold">24</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Teams on Duty</h5>
+            <p class="card-text display-5 fw-bold">8</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Calls Responded Today</h5>
+            <p class="card-text display-5 fw-bold">45</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Average Response Time</h5>
+            <p class="card-text display-5 fw-bold">7.8 min</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Critical Cases Today</h5>
+            <p class="card-text display-5 fw-bold">12</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Successful Rescues</h5>
+            <p class="card-text display-5 fw-bold">43</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Performance Metrics Section -->
+  <section class="container my-5">
+    <h2 class="mb-4">Team Performance Metrics</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Team ID</th>
+            <th>Team Members</th>
+            <th>Response Time (min)</th>
+            <th>Cases Resolved</th>
+            <th>Critical Case Success</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Team 1</td>
+            <td>John, Jane</td>
+            <td>7.5</td>
+            <td>12</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Team 2</td>
+            <td>Emily, Michael</td>
+            <td>8.1</td>
+            <td>10</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Team 3</td>
+            <td>Alice, Bob</td>
+            <td>7.2</td>
+            <td>8</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>Team 4</td>
+            <td>Chris, Sarah</td>
+            <td>9.0</td>
+            <td>6</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>Team 5</td>
+            <td>Luke, Anna</td>
+            <td>6.8</td>
+            <td>9</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Graphs Section -->
+  <section class="container my-5">
+    <h2 class="mb-4">Performance Analysis</h2>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <canvas id="responseTimeChart"></canvas>
+      </div>
+      <div class="col-md-4 mb-3">
+        <canvas id="criticalCaseChart"></canvas>
+      </div>
+      <div class="col-md-4 mb-3">
+        <canvas id="caseDistributionChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5">
+    <h2 class="mb-4">Team Performance History</h2>
+    <div class="accordion" id="accordionExample">
+      <!-- Day 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDay1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDay1" aria-expanded="true" aria-controls="collapseDay1">
+            Performance Metrics - Yesterday (Day 1)
+          </button>
+        </h2>
+        <div id="collapseDay1" class="accordion-collapse collapse show" aria-labelledby="headingDay1" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table class="table table-bordered table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th>Team ID</th>
+                  <th>Team Members</th>
+                  <th>Response Time (min)</th>
+                  <th>Cases Resolved</th>
+                  <th>Critical Case Success</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Team 1</td>
+                  <td>John, Jane</td>
+                  <td>7.8</td>
+                  <td>10</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Team 2</td>
+                  <td>Emily, Michael</td>
+                  <td>8.2</td>
+                  <td>12</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>Team 3</td>
+                  <td>Alice, Bob</td>
+                  <td>7.0</td>
+                  <td>9</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Team 4</td>
+                  <td>Chris, Sarah</td>
+                  <td>8.5</td>
+                  <td>8</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Team 5</td>
+                  <td>Luke, Anna</td>
+                  <td>6.9</td>
+                  <td>11</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Day 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDay2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDay2" aria-expanded="false" aria-controls="collapseDay2">
+            Performance Metrics - 2 Days Ago (Day 2)
+          </button>
+        </h2>
+        <div id="collapseDay2" class="accordion-collapse collapse" aria-labelledby="headingDay2" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table class="table table-bordered table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th>Team ID</th>
+                  <th>Team Members</th>
+                  <th>Response Time (min)</th>
+                  <th>Cases Resolved</th>
+                  <th>Critical Case Success</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Team 1</td>
+                  <td>John, Jane</td>
+                  <td>8.0</td>
+                  <td>11</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Team 2</td>
+                  <td>Emily, Michael</td>
+                  <td>7.9</td>
+                  <td>13</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Team 3</td>
+                  <td>Alice, Bob</td>
+                  <td>7.1</td>
+                  <td>10</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Team 4</td>
+                  <td>Chris, Sarah</td>
+                  <td>8.4</td>
+                  <td>7</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Team 5</td>
+                  <td>Luke, Anna</td>
+                  <td>6.7</td>
+                  <td>12</td>
+                  <td>4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Day 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingDay3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDay3" aria-expanded="false" aria-controls="collapseDay3">
+            Performance Metrics - 3 Days Ago (Day 3)
+          </button>
+        </h2>
+        <div id="collapseDay3" class="accordion-collapse collapse" aria-labelledby="headingDay3" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table class="table table-bordered table-hover">
+              <thead class="table-dark">
+                <tr>
+                  <th>Team ID</th>
+                  <th>Team Members</th>
+                  <th>Response Time (min)</th>
+                  <th>Cases Resolved</th>
+                  <th>Critical Case Success</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Team 1</td>
+                  <td>John, Jane</td>
+                  <td>7.7</td>
+                  <td>9</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>Team 2</td>
+                  <td>Emily, Michael</td>
+                  <td>7.8</td>
+                  <td>10</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Team 3</td>
+                  <td>Alice, Bob</td>
+                  <td>7.5</td>
+                  <td>12</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Team 4</td>
+                  <td>Chris, Sarah</td>
+                  <td>8.3</td>
+                  <td>8</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Team 5</td>
+                  <td>Luke, Anna</td>
+                  <td>6.8</td>
+                  <td>11</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-danger text-white text-center py-3">
+    <p class="mb-0">&copy; 2024 Rescue911 Team. All rights reserved.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Chart.js -->
+  <script>
+    // Line Chart for Response Times
+    const ctx1 = document.getElementById('responseTimeChart').getContext('2d');
+    const responseTimeChart = new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['8 AM', '10 AM', '12 PM', '2 PM', '4 PM', '6 PM', '8 PM'],
+        datasets: [{
+          label: 'Average Response Time (min)',
+          data: [7.5, 7.2, 8.1, 7.8, 7.9, 7.5, 7.3],
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+          borderColor: 'rgba(54, 162, 235, 1)',
+          borderWidth: 2,
+          fill: true,
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: { y: { beginAtZero: true } }
+      }
+    });
+
+    // Pie Chart for Case Distribution
+    const ctx2 = document.getElementById('caseDistributionChart').getContext('2d');
+    const caseDistributionChart = new Chart(ctx2, {
+      type: 'pie',
+      data: {
+        labels: ['Resolved Cases', 'Ongoing Cases', 'Critical Cases'],
+        datasets: [{
+          data: [43, 7, 12],
+          backgroundColor: ['#4bc0c0', '#ffce56', '#ff6384'],
+        }]
+      }
+    });
+
+    // Bar Chart for Critical Cases by Teams
+    const ctx3 = document.getElementById('criticalCaseChart').getContext('2d');
+    const criticalCaseChart = new Chart(ctx3, {
+      type: 'bar',
+      data: {
+        labels: ['Team 1', 'Team 2', 'Team 3', 'Team 4', 'Team 5'],
+        datasets: [{
+          label: 'Critical Cases Resolved',
+          data: [4, 3, 2, 1, 2],
+          backgroundColor: '#9966ff',
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
