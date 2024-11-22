@@ -88,21 +88,34 @@
             </ul>
         </div>
     </nav>
-    <div>
+    <header class="bg-light py-5 text-center">
+        <div class="container">
+          <h1 class="display-4">EMT Portal</h1>
+        </div>
+      </header>
 
-    </div>
+
+<!-- Popup Modal -->
+
+
     <div class="container my-4">
-        <h1 class="text-center">EMT Portal</h1>
-
          <h3 class = "p-2">Emergencies in Progress</h2>
-            <div class="row g-3 mb-4">
-                <div class="col-6 col-md-3">
+            <div class="row g-4 mb-4">
+                <div class="col-4 col-md-3">
+                    <a href = "callList.html"><button type="button" class="btn btn-danger w-100">Call Log</button></a>
+                </div>
+                <div class="col-4 col-md-3">
                     <a href = "emtReports.html"><button type="button" class="btn btn-danger w-100">EMT Response Dashboard</button></a>
                 </div>
-                <div class="col-6 col-md-3">
+                <div class="col-4 col-md-3">
                     <a href = "emtHealth.html"><button type="button" class="btn btn-danger w-100">EMT Health Performance</button></a>
                 </div>
-              </div>
+                <div class="col-4 col-md-3">
+                    <a href = "patientInfo.html"><button type="button" class="btn btn-danger w-100">Patient Information</button></a>
+                </div>
+                </div>
+                
+           
 
         <div class="row">
             <div class="col-md-6 col-lg-3 mb-3">
@@ -338,6 +351,8 @@
             var details = document.getElementById(id);
             details.style.display = details.style.display === 'none' ? 'block' : 'none';
         }
+
+      
     </script>
 
 </body>

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency 911 - Help is Here</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Rescue911</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,26 +34,66 @@
             </ul>
         </div>
     </nav>
-    <header>
+    <header class="text-center my-4">
         <h1>Rescue911</h1>
         <p>Your Safety is Our Priority</p>
     </header>
     <main>
-        <div class="info">
+        <div class="info text-center">
             <h2>Message from the Rescue911 Team</h2>
             <p>If you are in danger or require urgent assistance, please dial 911. Our emergency responders are ready to help you at any time. Your safety is our #1 priority.</p>
         </div>
-        <a href="#" class="button">Call 911</button></a>
-        <a href="loginOperator.html" class="button">Operator Portal</a>
-        <a href="loginManager.html" class="button">Manager Portal</a>
-        <a href="loginEMT.html" class="button" >EMT Portal</a>
-        <a href="loginDispatch.html" class="button">Dispatcher Portal</a>
-        <div class="p-3">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48576.305727931205!2d-86.95804242115021!3d40.452714050266984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8812fd472165042d%3A0xdf75e293a8a11bef!2sWest%20Lafayette%2C%20IN!5e0!3m2!1sen!2sus!4v1727374817839!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="d-flex justify-content-center my-3">
+            <a href="#" class="btn btn-danger mx-2">Call 911</a>
+            <a href="loginOperator.html" class="btn btn-secondary mx-2">Operator Portal</a>
+            <a href="loginManager.html" class="btn btn-secondary mx-2">Manager Portal</a>
+            <a href="loginEMT.html" class="btn btn-secondary mx-2">EMT Portal</a>
+            <a href="loginDispatch.html" class="btn btn-secondary mx-2">Dispatcher Portal</a>
+        </div>
+
+        <!-- Flexbox Row for Map and Login -->
+        <div class="d-flex justify-content-between align-items-start mt-4">
+            <!-- Map Section -->
+            <div style="flex: 0.5; padding-right: 15px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48576.305727931205!2d-86.95804242115021!3d40.452714050266984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8812fd472165042d%3A0xdf75e293a8a11bef!2sWest%20Lafayette%2C%20IN!5e0!3m2!1sen!2sus!4v1727374817839!5m2!1sen!2sus" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Login Form Section -->
+            <div style="flex: 0.5; padding: 15px;">
+                <h3 class="p-2">Member Login</h3>
+                <form onsubmit="return validateLogin()" class="p-3 border rounded bg-light">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <a href="register.html" class="d-block text-center mt-3">Register</a>
+                </form>
+            </div>
         </div>
     </main>
-    <footer>
-        <p style="text-align:center; margin-top: 20px;">© 2024 Rescue911. All Rights Reserved.</p>
+    <footer class="text-center mt-4">
+        <p>© 2024 Rescue911. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "member" && password === "123") {
+                alert("Login successful!");
+                return true; // Allow form submission
+            } else {
+                alert("Invalid username or password. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
 </body>
 </html>
